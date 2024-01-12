@@ -1,0 +1,59 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col mb-1">
+            <p id="header3"><strong>Home</strong></p>
+        </div>
+        <div class="col text-end d-flex justify-content-end mb-1" style="background-color: white;">
+            <button id="flwbtn" style="background-color: #6C1891;
+            color: white; border-radius: 5px;">Follow</button>
+        </div>
+        <hr>
+    </div>
+
+    {% if user.is_authenticated %}
+    <div id="postformdiv" class="mb-3" >
+        <form method="POST" id="postform">
+            {% csrf_token %}
+            {{ postform.thepost }}
+            <input class="mt-2 px-2 py-1" id="makepost" type="submit" value="Post" style="border-radius: 2px;">
+        </form>
+    </div>
+
+    <div id="allpostsdiv">
+    </div>
+
+    <div id="flwpostsdiv">
+    </div>
+
+    <div id="profilediv">
+        <div id="userdiv">
+            <div id="circlediv" class="circle mb-3"></div>
+            <div id="accountinfo" class="mb-3"></div>
+            <div id="userposts"></div>
+        </div>
+    </div>
+
+    <div id="pagebtndiv" class="pagination justify-content-center align-items-center" aria-label="Page navigation">
+        <div id="pagebtns" class="row">
+            <div class="col">
+                <button id="prevpage"><i class="bi bi-arrow-left-circle-fill" style="font-size: 1.5rem;"></i></button>
+            </div>
+            <div class="col">
+                <p id="pagenum" class="px-2 mt-1" style="border: 2px solid #F6F6F6; border-radius: 5px; color: #F6F6F6; background-color: #6C1891;">1</p>
+            </div>
+            <div class="col">
+                <button id="nextpage"><i class="bi bi-arrow-right-circle-fill" style="font-size: 1.5rem;"></i></button>
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'network/network.js' %}"></script>
+{% endblock %}
