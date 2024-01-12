@@ -1,7 +1,7 @@
 # Interactia
 A Twitter-like single-page application
 
-![Interactia:]
+![Interactia:](https://github.com/zerrynlh/Interactia/blob/main/interactia2.jpeg)
 
 Interactia is a dynamic single-page application built using mostly JavaScript. Python/Django was utilized for the backend. Two Django models were created to store information regarding users and posts.
 
