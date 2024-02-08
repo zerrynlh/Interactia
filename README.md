@@ -18,8 +18,14 @@ Bootstrap was utilized for responsiveness as well as implementing pagination.
 - Edit Post: Empowering users with the ability to edit their posts securely
 - "Like" and "Unlike": Intuitive like/unlike functionality for user engagement
 
+# To run this application:
+
 #### Install dependencies:
->pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
 #### To run this application:
->python manage.py runserver
+```
+python manage.py runserver
+```
