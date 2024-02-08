@@ -18,7 +18,7 @@ Bootstrap was utilized for responsiveness as well as implementing pagination.
 - Edit Post: Empowering users with the ability to edit their posts securely
 - "Like" and "Unlike": Intuitive like/unlike functionality for user engagement
 
-# To run this application:
+## To run this application:
 
 #### Install dependencies:
 ```
